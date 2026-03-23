@@ -184,9 +184,9 @@ def setup_venv():
     # 如果上面没找到（极少数情况），尝试从 env_manager 所在目录向上找
     if not main_script.exists() or "env_manager" in main_script.name.lower():
         possible_paths = [
-            Path.cwd() / "scripts" / "transcribe.py",
-            Path.cwd() / "transcribe.py",
-            Path(__file__).parent.parent / "scripts" / "transcribe.py",   # 项目根目录/scripts/transcribe.py
+            Path.cwd() / "scripts" / "generate_metadata_list.py",
+            Path.cwd() / "generate_metadata_list.py",
+            Path(__file__).parent.parent / "scripts" / "generate_metadata_list.py",   # 项目根目录/scripts/generate_metadata_list.py
         ]
         for p in possible_paths:
             if p.exists():
